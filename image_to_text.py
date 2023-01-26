@@ -32,12 +32,12 @@ OCR Engine modes:
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-myconfig = r"--psm 6 --oem 3"
+myconfig = r"--psm 12 --oem 3"
 
-text = pytesseract.image_to_string(PIL.Image.open("Images/test_img_3.png"), config=myconfig)
+text = pytesseract.image_to_string(PIL.Image.open("Images/drug_4.png"), config=myconfig)
 print(text)
 
-img = cv2.imread("Images/test_img_3.png")
+img = cv2.imread("Images/drug_4.png")
 height, width, _ = img.shape
 
 boxes = pytesseract.image_to_boxes(img, config=myconfig)
